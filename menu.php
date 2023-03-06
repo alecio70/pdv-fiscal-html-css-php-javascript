@@ -19,7 +19,7 @@
                         <li><a href="#">Fornecedores</a></li>
                         <li><a href="#">Usuarios</a></li>
                         <li><a href="#">Funcionários</a></li>
-                        <li><a href="#">Cargos</a></li>
+                        <li><a href="cadastros/cargos.html">Cargos</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Estoque</a>

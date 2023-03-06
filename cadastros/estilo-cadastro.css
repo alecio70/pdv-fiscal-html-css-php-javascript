@@ -1,0 +1,342 @@
+@import url('https://fonts.gooogleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #fff;   
+}
+
+.navegador {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px; 
+    width: 70px; 
+    border-radius: 10px;
+    box-sizing: initial;
+    border-left: 5px solid #4d5bf9;
+    background: #4d5bf9; 
+    transition: width 0.5s;
+    overflow-x: hidden;
+}
+
+.navegador.active {
+    width: 300px;   
+}
+
+.navegador ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.navegador ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;  
+    border-top-left-radius: 20px;  
+    border-bottom-left-radius: 20px; 
+}
+.navegador ul li.active {
+    background: #fff;    
+}
+
+.navegador ul li b:nth-child(1) {
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background: #fff;
+    display: none;
+}
+
+.navegador ul li b:nth-child(1)::before {
+    content: '';
+    position: absolute;  
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background: #4d5bf9;
+}
+
+.navegador ul li b:nth-child(2) {
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background: #fff;
+    display: none;
+}
+
+.navegador ul li b:nth-child(2)::before {
+    content: '';
+    position: absolute;  
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background: #4d5bf9;
+}
+
+.navegador ul li.active b:nth-child(1),
+.navegador ul li.active b:nth-child(2) {
+    display: block;
+}
+
+.navegador ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;  
+    text-decoration: none;
+    color: #fff;  
+}
+
+.navegador ul li.active a {
+    color: #333;
+}
+
+.navegador ul li a .material-icons {
+    position: relative;
+    display: block;
+    min-width: 60px; 
+    height: 60px;
+    line-height: 60px; 
+    text-align: center;  
+}
+
+.navegador ul li a .title {
+    position: relative;
+    display: block;   
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px; 
+    white-space: normal;
+}
+
+
+
+.alterna {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #4d5bf9;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alterna.active {
+    background: #ff4d89;
+}
+
+.alterna span {
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;   
+}
+
+.alterna span#abrir,
+.alterna.active span#fechar {
+    display: block;
+}
+
+.alterna span#fechar,
+.alterna.active span#abrir {
+    display: none;
+}
+.box h1 {
+    margin: 0 0 10px;
+    padding: 0;  
+    color: #4d5bf9;  
+    font-size: 24px;
+}
+
+.box {
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    width: 500px;  
+    transform: translate(-50%);   
+}
+
+.box input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.box input[type="text"] {
+    background-color: #fff;   
+    width: 340px; 
+    height: 50px;
+    /*border: none;*/
+    outline: none;
+    padding: 0 25px; 
+    border-radius: 25px 0 0 25px;
+}
+
+.box input[type="submit"] {
+    position: relative;
+    border-radius: 0 25px 25px 0;  
+    width: 150px; 
+    height: 50px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #4d5bf9;
+    color: #fff;
+    left: -5px;
+}
+
+.box input[type="submit"]:hover {
+    background: #009688;   
+}
+
+.corpo {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    font-family: Arial;
+    text-transform: uppercase;
+    font-size: 30px;
+    width: 180px;
+    height: 40px;
+    top: 140px;
+    left: 52%;
+    border-radius: 80px;
+    line-height: 40px;
+    text-align: center;
+    border: 3px solid #4d5bf9;
+    display: block;
+    text-decoration: none;
+    color: #4d5bf9;
+    overflow: hidden;
+    background: transparent;
+    transition: .3s;
+    display: none;
+}
+
+.btn.active {
+    display: block;
+}
+
+.btn:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #4d5bf9; 
+    opacity: .5;  
+    top: -100%; 
+    left: 0;
+    z-index: -1;
+    transition: .3s;
+    
+}
+
+.btn:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #4d5bf9;   
+    top: -100%; 
+    left: 0;
+    z-index: -1;
+    transition: .3s;
+    transition-delay: .2s;
+}
+
+.btn:hover {
+    color: #fff;    
+}
+
+.btn:hover::before {
+    top: 0;
+}
+
+.btn:hover:after {
+    top: 0;
+}
+
+.tabela {
+    position: absolute;
+    font-family: sans-serif;
+    top: 33%; 
+    left: 50%;
+    width: 400px;
+    height: 360px;
+    overflow-y: scroll; 
+    background: #fff;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%);
+    display: none;
+}
+
+.tabela.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #005277;   
+    border-collapse: collapse;
+    text-align: left;
+    
+}
+
+
+td a {
+    color: #000;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #4d5bf9; 
+    color: #fff; 
+}
+
+tr th:nth-child(1) {
+    width: 60px; 
+    text-align: center; 
+    background: #3842ac; 
+}
+
+tr th:nth-child(4), tr th:nth-child(3) {
+    width: 30px; 
+    text-align: center;   
+    padding: 10px;    
+}
+
+tr td:nth-child(1) {
+    background: #4d5bf9;
+    color: #fff;   
+    text-align: center;
+}
