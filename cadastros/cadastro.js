@@ -1,6 +1,18 @@
-$(document).ready(function () {
-    $('#tabelaCargo').DataTable();
-});
+$('#tabelaCargo').dataTable( {
+    "language": {
+        
+        "paginate": {
+            "next": "Próximo",
+            "previous": "Anterior",
+          },
+      "lengthMenu": "Mostrar _MENU_ entradas",
+      "emptyTable": "Sem dados disponíveis na tabela",
+      "search": "Pesquisar:",
+      "info": "Mostrando _START_ para _END_ de _TOTAL_ entradas"
+    }, 
+
+    
+  } );
 
 let menuAlterna = document.querySelector('.alterna');
 let navegador = document.querySelector('.navegador');
