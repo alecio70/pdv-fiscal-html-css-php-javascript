@@ -1,18 +1,19 @@
-$('#tabelaCargo').dataTable( {
+$('#tabelaCargo').dataTable({
     "language": {
-        
+
         "paginate": {
             "next": "Próximo",
             "previous": "Anterior",
-          },
-      "lengthMenu": "Mostrar _MENU_ entradas",
-      "emptyTable": "Sem dados disponíveis na tabela",
-      "search": "Pesquisar:",
-      "info": "Mostrando _START_ para _END_ de _TOTAL_ entradas"
-    }, 
+        },
+        "lengthMenu": "Mostrar _MENU_ entradas",
+        "emptyTable": "Sem dados disponíveis na tabela",
+        "search": "Pesquisar:",
+        "info": "Mostrando _START_ para _END_ de _TOTAL_ entradas",
+        "zeroRecords": "Nenhum registro correspondente encontrado"
+    },
 
-    
-  } );
+
+});
 
 let menuAlterna = document.querySelector('.alterna');
 let navegador = document.querySelector('.navegador');
@@ -45,7 +46,7 @@ cadastro.onclick = function () {
 }
 
 estoque.onclick = function () {
-    tabelaCargos.className = 'posicao container w-75 pt-5 d-none d-print-block';
+    tabelaCargos.className = 'posicao container w-50 pt-5 d-none d-print-block';
     btn.className = 'b btn btn-outline-primary d-none d-print-block';
     console.log(btn);
 }
@@ -53,13 +54,13 @@ estoque.onclick = function () {
 movimentos.onclick = function () {
     tabelaCargos.className = 'posicao container w-75 pt-5 d-none d-print-block';
     btn.className = 'b btn btn-outline-primary d-none d-print-block';
-    console.log(btn);
+    
 }
 
 cargos.onclick = function () {
-    tabelaCargos.className = 'posicao container w-75 pt-5';
+    tabelaCargos.className = 'posicao container w-50 pt-5';
     btn.className = 'b btn btn-outline-primary  pt-1';
-    console.log(btn);
+    
 }
 
 let lista = document.querySelectorAll('.lista');
@@ -70,9 +71,6 @@ for (let i = 0; i < lista.length; i++) {
             lista[j++].className = 'lista';
         }
         lista[i].className = 'lista active';
-        console.log(
-            document.getElementsByClassName("lista")[4]
-        )
 
     }
 }

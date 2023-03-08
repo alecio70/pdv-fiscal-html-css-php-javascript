@@ -222,7 +222,7 @@ body {
     font-size: 30px;
     width: 180px;
     height: 40px;
-    right: -80%;
+    right: -70%;
     top: 25px;
     border-radius: 80px;
     line-height: 40px;
@@ -284,4 +284,42 @@ body {
     position: relative;
     left: 12%;
     top: 20px;
+    
+}
+
+#fade-aviso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal-aviso {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 300px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-aviso-header {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-aviso-body p {
+    margin-bottom: 1rem;
+    
 }
